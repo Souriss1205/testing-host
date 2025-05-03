@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Mật khẩu bí mật</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-image: url('https://i.pinimg.com/originals/23/3d/87/233d8767d4e3c57cf4a9b85caecbb19b.gif');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+    .container {
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      margin-left: 10px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔒 Nhập mật khẩu</h2>
+    <p>Gợi ý: Tên con mèo tao hay gọi 🐾</p>
+    <input type="password" id="password" placeholder="Nhập mật khẩu">
+    <button onclick="checkPassword()">OK</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      var result = document.getElementById("result");
+      if(password === "miuu") {
+        result.style.color = "#00ff00";
+        result.innerHTML = "✅ Đúng rồi! Click nhận quà 👉 <a href='venny-voice.html' target='_blank'>Nhận quà</a>";
+      } else {
+        result.style.color = "#ff6666";
+        result.innerHTML = "❌ Sai rồi, thử lại đi Venny!";
+      }
+    }
+  </script>
+
+</body>
+</html>
